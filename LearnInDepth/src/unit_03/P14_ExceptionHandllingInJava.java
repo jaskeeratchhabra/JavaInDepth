@@ -143,7 +143,6 @@ class exception{
 
 	}
 
-}
 
 @SuppressWarnings("serial")
 class ManualException extends Exception {
@@ -155,8 +154,9 @@ class ManualException extends Exception {
 	}
 
 }
-
 }
+
+
 public class P14_ExceptionHandllingInJava {
 
 
@@ -165,7 +165,7 @@ public class P14_ExceptionHandllingInJava {
         obj.basicException();
         obj.handelException();
         obj.multipleCatch();
-       // obj.inputMismatchException();
+       //obj.inputMismatchException();
         obj.stackOverFlowError(2);
         obj.indexOutofBoundException();
         obj.nullPointerException();
