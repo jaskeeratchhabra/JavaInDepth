@@ -90,7 +90,7 @@ class exception{
         try{
             useofThrow(17);
         }catch (Exception e){
-            //TODO Auto generated catch blocl
+            
             e.printStackTrace();
         }
         finally{
@@ -112,7 +112,7 @@ class exception{
 
 		// Checked Exception [Run this code over terminal and check compiler error]
 		try {
-			useOfThrow(19);
+			useOfThrow(1);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
