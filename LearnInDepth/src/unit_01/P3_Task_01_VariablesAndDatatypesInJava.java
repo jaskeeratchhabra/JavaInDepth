@@ -13,7 +13,7 @@ public class P3_Task_01_VariablesAndDatatypesInJava {
 		//This way these local variables can be printed.
 		System.out.println(a);
 		System.out.println(b);
-		System.out.println(c);
+		//System.out.println(c);
 		System.out.println(d);
 		System.out.println(e);
 		

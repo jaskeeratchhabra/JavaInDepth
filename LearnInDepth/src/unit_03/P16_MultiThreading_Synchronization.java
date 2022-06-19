@@ -39,28 +39,29 @@ public class P16_MultiThreading_Synchronization {
 		threadOne.start();
 		threadTwo.start();
 
-		//Waits for this thread to die. {Main thread will wait until this thread is finished}
-		
-		threadOne.join();
-		
-		//Waits for this thread to die. {Main thread will wait until this thread is finished}
-	    threadTwo.join();
-			System.out.println("Count: " + WebCount.count);
+		// Waits for this thread to die. {Main thread will wait until this thread is
+		// finished}
 
-		}
+		threadOne.join();
+
+		// Waits for this thread to die. {Main thread will wait until this thread is
+		// finished}
+		threadTwo.join();
+		System.out.println("Count: " + WebCount.count);
 
 	}
 
+}
 
 class WebCount {
 
 	public static int count = 0;
 
-	//You want T1 to complete first and then T2 
+	// You want T1 to complete first and then T2
 	public synchronized void webcount() {
-		
-		//If not synchronized then, T1 and T2 may read the same value of count at 
-		//the same time and may increment same time as well
+
+		// If not synchronized then, T1 and T2 may read the same value of count at
+		// the same time and may increment same time as well
 		count++;
 	}
 }

@@ -1,4 +1,5 @@
 package unit_03;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +31,8 @@ public class P16_MultiThreading_ProducerConsumer {
 				synchronized (queue) {
 
 					if (queue.size() == 20) {
-						System.out.println("Queue is full now wait for consumer to consume it");;
+						System.out.println("Queue is full now wait for consumer to consume it");
+						;
 						try {
 							queue.wait();
 						} catch (InterruptedException e) {
@@ -88,12 +90,12 @@ public class P16_MultiThreading_ProducerConsumer {
 		List<Integer> queue = new ArrayList<Integer>();
 
 		Thread producer1 = new Thread(new Producer(queue));
-		Thread producer2 = new Thread(new Producer(queue));
-		Thread consumer1 = new Thread(new Consumer(queue));
+		 Thread producer2 = new Thread(new Producer(queue));
+		 Thread consumer1 = new Thread(new Consumer(queue));
 		Thread consumer2 = new Thread(new Consumer(queue));
 		producer1.start();
-		producer2.start();
-		consumer1.start();
+		 producer2.start();
+		 consumer1.start();
 		consumer2.start();
 
 	}

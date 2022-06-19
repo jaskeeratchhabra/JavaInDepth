@@ -1,6 +1,5 @@
 package unit_03;
 
-
 /*
  * 
  * Inter-thread Communication:
@@ -15,23 +14,23 @@ public class P16_MultiThreading_WaitAndNotify {
 	public static void main(String[] args) {
 
 		SharedResource c = new SharedResource();
-		
+
 		new Thread() {
 			public void run() {
 				c.withdraw(15000);
 			}
 		}.start();
-		
+
 //		new Thread() {
 //			public void run() {
 //				c.withdraw(15000);
 //			}
 //		}.start();
-		
+
 		new Thread() {
 			public void run() {
 				c.deposit(10000);
-				//c.deposit(30000);
+				// c.deposit(30000);
 			}
 		}.start();
 	}
@@ -60,6 +59,6 @@ class SharedResource {
 		this.amount += amount;
 		System.out.println("deposit completed... ");
 		notify();
-		//notifyAll();
+		// notifyAll();
 	}
 }
